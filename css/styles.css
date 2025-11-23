@@ -1,0 +1,194 @@
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #222;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  color: white;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 14px 20px;
+  display: block;
+}
+
+nav ul li a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+header {
+  background-color: #000;
+  color: #f1c40f;
+  text-align: center;
+  padding: 20px 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  letter-spacing: 0.5px;
+  border-top: 1px solid #333;
+}
+
+nav {
+  background-color: #343a40;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+main {
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+footer {
+  background-color: #f8f9fa;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.imagenPersonaje {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.personajes {
+  display: flex;
+  padding: 100px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.tablaPersonajes {
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border: 2px solid #ddd;
+}
+
+.tablaPersonajes th,
+.tablaPersonajes td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.imagenRickMorty {
+  width: 80%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.intro {
+  text-align: center;
+}
+
+.intro p {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.footer-tfi {
+  background-color: #000;
+  color: #f1c40f;
+  text-align: center;
+  padding: 20px 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  border-top: 1px solid #333;
+}
+
+.footer-tfi p {
+  margin: 0;
+}
+
+.footer-contacto {
+  white-space: nowrap;
+}
+
+.seccion-contacto {
+  margin-top: 100px;
+  padding: 100px 1rem;
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+.campo-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.campo-form label {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.campo-form input,
+.campo-form textarea {
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font: inherit;
+}
+
+.campo-form input.input-error,
+.campo-form textarea.input-error {
+  border-color: #e53935;
+  background-color: #ffe5e5;
+}
+
+.error-msg {
+  color: #e53935;
+  font-size: 0.8rem;
+  min-height: 1em;
+}
+
+.btn-enviar {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.mensaje-exito {
+  margin-top: 0.75rem;
+  color: #2e7d32;
+  font-weight: 600;
+}

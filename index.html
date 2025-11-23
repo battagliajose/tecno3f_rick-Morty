@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tecno 3F - TPI - José A. Battaglia</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header id="header">Rick & Morty</header>
+    <nav>
+      <ul>
+        <li><a href="#header">Inicio</a></li>
+        <li><a href="#personajes">Personajes</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="intro" class="intro">
+        <h1>Rick and Morty</h1>
+        <image
+          class="imagenRickMorty"
+          src="https://www.infobae.com/resizer/v2/YHAUBUYW75FZVLG4Z4WL5S6LMY.jpg?auth=86380fb837f833d1c1bf2826ced5868cd706469b29b1633837dd64f132db55b2&smart=true&width=992&height=661&quality=85"
+          alt="Rick and Morty"
+        />
+        <p>
+          Rick y Morty (en inglés: Rick and Morty) es una serie de televisión
+          estadounidense de animación para adultos creada por Justin Roiland y
+          Dan Harmon en 2013 para Adult Swim, también se emitió en Cartoon
+          Network. La serie sigue las desventuras de un científico, Rick
+          Sánchez, y su fácilmente influenciable nieto, Morty, quienes pasan el
+          tiempo entre la vida doméstica y los viajes espaciales e
+          intergalácticos. Dan Harmon, el cocreador de la serie y Justin Roiland
+          son los encargados de las voces principales de Morty y Rick, la serie
+          también incluye las voces de Chris Parnell, Spencer Grammer y Sarah
+          Chalke.
+        </p>
+        <p>
+          La serie se originó por un cortometraje rudimentario animado por
+          Roiland para el festival de cine Channel 101 llamado Doc and Mharti,
+          una parodia de los principales protagonistas de Back to the Future.
+          Cuando la cadena NBC despidió a Harmon en 2013 por discusiones entre
+          él y los ejecutivos de la serie que había creado, Community, él y
+          Roiland desarrollaron una serie basada en los personajes ya creados
+          por Roiland.
+        </p>
+      </section>
+      <section id="personajes" class="personajes">
+        <select id="personajesSelect">
+          <option value="">Seleccione un personaje...</option>
+        </select>
+        <image
+          class="imagenPersonaje"
+          src="https://louisville.edu/kent/images-folder/doctoral-student-directory/blank-profile/image"
+          alt="Imagen del personaje"
+        />
+        <table class="tablaPersonajes">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Estado</th>
+              <th>Especie</th>
+              <th>Tipo</th>
+              <th>Género</th>
+              <th>Origen</th>
+              <th>Creado</th>
+            </tr>
+          </thead>
+          <tbody id="tablaPersonaje"></tbody>
+        </table>
+      </section>
+      <section id="contacto" class="seccion-contacto">
+        <h2>Dejá tu mensaje interdimensional</h2>
+        <p>Escribile a Rick, Morty o a quien esté sobrio en esta dimensión.</p>
+
+        <form id="form-contacto" novalidate>
+          <div class="campo-form">
+            <label for="nombre">Nombre</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ej: Morty Smith"
+              required
+            />
+            <small class="error-msg"></small>
+          </div>
+
+          <div class="campo-form">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="ejemplo@galaxia.com"
+              required
+            />
+            <small class="error-msg"></small>
+          </div>
+
+          <div class="campo-form">
+            <label for="mensaje">Mensaje</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="4"
+              placeholder="Contanos qué pensás del multiverso..."
+              required
+            ></textarea>
+            <small class="error-msg"></small>
+          </div>
+
+          <button type="submit" class="btn-enviar">Enviar mensaje</button>
+
+          <p id="form-ok" class="mensaje-exito" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+    <footer class="footer-tfi">
+      <p>
+        <strong>Trabajo Final:</strong> Creación de un Sitio Web Onepage •
+        desarrollado por <strong>José A. Battaglia</strong> •
+        <span class="footer-contacto">(03447) 15-625474</span> • DNI 28.817.945
+      </p>
+    </footer>
+  </body>
+  <script src="index.js"></script>
+</html>
