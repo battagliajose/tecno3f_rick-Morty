@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  padding-top: 80px;
 }
 
 nav {
@@ -8,6 +9,7 @@ nav {
   width: 100%;
   background: #222;
   z-index: 1000;
+  height: 50px;
 }
 
 nav ul {
@@ -34,6 +36,17 @@ nav ul li a {
 nav ul li a:visited {
   color: white;
   text-decoration: none;
+}
+
+.opcionMenu {
+  cursor: pointer;
+  transition: color 0.3s;
+  transition: font-size 0.3s;
+}
+
+.opcionMenu:hover {
+  color: yellow;
+  font-size: larger;
 }
 
 body {
@@ -177,6 +190,11 @@ footer {
   color: #e53935;
   font-size: 0.8rem;
   min-height: 1em;
+  visibility: hidden;
+}
+
+.error-msg-show {
+  visibility: visible;
 }
 
 .btn-enviar {

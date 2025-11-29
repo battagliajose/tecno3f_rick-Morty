@@ -1,4 +1,6 @@
 const personajesSelect = document.getElementById('personajesSelect');
+const formulario = document.getElementById('form-contacto');
+
 let personajes = null;
 
 async function obtenerPersonajes() {
@@ -7,6 +9,7 @@ async function obtenerPersonajes() {
     const data = await response.json();
     return data;
   } catch (error) {
+    alert('Hubo un error al obtener los personajes.');
     console.error('Error en la petición:', error);
   }
 }
@@ -29,15 +32,15 @@ personajesSelect.addEventListener('change', (event) => {
     const personaje = personajes.results.find((p) => p.id == personajeId);
     imagenPersonaje.src = personaje.image;
     imagenPersonaje.alt = personaje.name;
-    agregarFila(personaje);
+    mostrarPersonaje(personaje);
   } else {
     imagenPersonaje.src =
-      'https://louisville.edu/kent/images-folder/doctoral-student-directory/blank-profile/image';
+      'https://rickandmortyapi.com/api/character/avatar/19.jpeg';
     imagenPersonaje.alt = 'Imagen del personaje';
   }
 });
 
-function agregarFila(personaje) {
+function mostrarPersonaje(personaje) {
   const tablaPersonaje = document.getElementById('tablaPersonaje');
 
   if (tablaPersonaje.rows.length > 0) tablaPersonaje.lastChild.remove();
@@ -56,4 +59,47 @@ function agregarFila(personaje) {
   tablaPersonaje.appendChild(fila);
 }
 
+function validarFormulario(event) {
+  event.preventDefault();
+
+  const campoNombre = formulario.nombre;
+  const campoEmail = formulario.email;
+  const campoMensaje = formulario.mensaje;
+  const errorNombre = campoNombre.parentElement.querySelector('.error-msg');
+  const errorEmail = campoEmail.parentElement.querySelector('.error-msg');
+  const errorMensaje = campoMensaje.parentElement.querySelector('.error-msg');
+
+  const nombre = campoNombre.value.trim();
+  const email = campoEmail.value.trim();
+  const mensaje = campoMensaje.value.trim();
+
+  errorNombre.classList.remove('error-msg-show');
+  errorEmail.classList.remove('error-msg-show');
+  errorMensaje.classList.remove('error-msg-show');
+
+  if (!nombre) {
+    errorNombre.classList.add('error-msg-show');
+    return;
+  }
+
+  if (!email || !validateEmail(email)) {
+    errorEmail.classList.add('error-msg-show');
+    return;
+  }
+
+  if (!mensaje) {
+    errorMensaje.classList.add('error-msg-show');
+    return;
+  }
+
+  alert('¡Mensaje enviado con éxito! Gracias por contactarnos.');
+  formulario.reset();
+}
+
+const validateEmail = (email) => {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+};
+
 cargarPersonajes();
+formulario.addEventListener('submit', validarFormulario);

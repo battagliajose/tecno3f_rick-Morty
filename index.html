@@ -9,15 +9,17 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   </head>
+
   <body>
     <header id="header">Rick & Morty</header>
     <nav>
       <ul>
-        <li><a href="#header">Inicio</a></li>
-        <li><a href="#personajes">Personajes</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#header" class="opcionMenu">Inicio</a></li>
+        <li><a href="#personajes" class="opcionMenu">Personajes</a></li>
+        <li><a href="#contacto" class="opcionMenu">Contacto</a></li>
       </ul>
     </nav>
+
     <main>
       <section id="intro" class="intro">
         <h1>Rick and Morty</h1>
@@ -48,13 +50,14 @@
           por Roiland.
         </p>
       </section>
+
       <section id="personajes" class="personajes">
         <select id="personajesSelect">
           <option value="">Seleccione un personaje...</option>
         </select>
         <image
           class="imagenPersonaje"
-          src="https://louisville.edu/kent/images-folder/doctoral-student-directory/blank-profile/image"
+          src="https://rickandmortyapi.com/api/character/avatar/19.jpeg"
           alt="Imagen del personaje"
         />
         <table class="tablaPersonajes">
@@ -72,9 +75,10 @@
           <tbody id="tablaPersonaje"></tbody>
         </table>
       </section>
+
       <section id="contacto" class="seccion-contacto">
-        <h2>Dejá tu mensaje interdimensional</h2>
-        <p>Escribile a Rick, Morty o a quien esté sobrio en esta dimensión.</p>
+        <h2>Dejá tu mensaje</h2>
+        <p>Escribinos sugerencias, ideas o lo que quieras!</p>
 
         <form id="form-contacto" novalidate>
           <div class="campo-form">
@@ -83,10 +87,10 @@
               type="text"
               id="nombre"
               name="nombre"
-              placeholder="Ej: Morty Smith"
+              placeholder="Tu nombre"
               required
             />
-            <small class="error-msg"></small>
+            <small class="error-msg">Decinos tu nombre</small>
           </div>
 
           <div class="campo-form">
@@ -95,10 +99,12 @@
               type="email"
               id="email"
               name="email"
-              placeholder="ejemplo@galaxia.com"
+              placeholder="ejemplo@mail.com"
               required
             />
-            <small class="error-msg"></small>
+            <small class="error-msg"
+              >Por favor ingresa un email válido para poder contactarte.</small
+            >
           </div>
 
           <div class="campo-form">
@@ -107,25 +113,25 @@
               id="mensaje"
               name="mensaje"
               rows="4"
-              placeholder="Contanos qué pensás del multiverso..."
+              placeholder="Dejanos tu mensaje..."
               required
             ></textarea>
-            <small class="error-msg"></small>
+            <small class="error-msg">Completa el mensaje</small>
           </div>
 
           <button type="submit" class="btn-enviar">Enviar mensaje</button>
-
-          <p id="form-ok" class="mensaje-exito" aria-live="polite"></p>
         </form>
       </section>
     </main>
+
     <footer class="footer-tfi">
       <p>
-        <strong>Trabajo Final:</strong> Creación de un Sitio Web Onepage •
-        desarrollado por <strong>José A. Battaglia</strong> •
-        <span class="footer-contacto">(03447) 15-625474</span> • DNI 28.817.945
+        <strong>Trabajo Final</strong>- Creación de un Sitio Web Onepage -
+        desarrollado por <strong>José A. Battaglia</strong> -
+        <span class="footer-contacto">(03447) 15-625474</span> - DNI 28.817.945
       </p>
     </footer>
   </body>
+
   <script src="index.js"></script>
 </html>
